@@ -16,14 +16,14 @@ export class SingupRouteComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this,this.openDialog()
+    this.openDialog()
   }
 
   openDialog() {
     const dialogRef = this.dialog.open(SingupComponentDialog);
 
     dialogRef.afterClosed().subscribe(result => {
-      this.router.navigate([''])
+      this.router.navigate(['startpage'])
     })
   }
 

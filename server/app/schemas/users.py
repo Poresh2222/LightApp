@@ -14,4 +14,7 @@ class UserLogin(BaseModel):
     password: str
 
 class UserOut(UserLogin):
-    uid: str    
+    uid: str
+
+class Phone(BaseModel):
+    phone: str  

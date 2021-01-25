@@ -12,6 +12,19 @@ user_router = APIRouter()
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 
+@user_router.post('/users/tel_check')
+async def tel_check(phone: user_schemas.Phone):
+    phone_check = await firebase_utils.check_phone(phone.phone)
+    if phone_check == False:
+        raise HTTPException(
+           status_code=400,
+           detail='Phone is already exist'
+        )
+    return HTTPException(
+        status_code=200
+    )    
+
+
 @user_router.post('/users/singup')
 async def create_user(user: user_schemas.UserCreate):
     password_chek = user_utils.check_pass_len(user.password)

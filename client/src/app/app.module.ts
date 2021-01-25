@@ -15,6 +15,7 @@ import { SinginComponent } from './components/dialog/singin/singin.component';
 import { BaseComponent } from './components/base/base.component';
 import { BasePageComponent } from './components/base-page/base-page.component';
 import { SingupFormComponent } from './components/dialog/singup-form/singup-form.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SingupFormComponent } from './components/dialog/singup-form/singup-form
     SinginComponent,
     BaseComponent,
     BasePageComponent,
-    SingupFormComponent
+    SingupFormComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

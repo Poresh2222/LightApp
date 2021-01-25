@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { BasePageComponent } from '../../base-page/base-page.component'
+import { SingupComponentDialog } from '../singup/singup.component';
 
 
 @Component({
@@ -14,7 +15,10 @@ export class SingupFormComponent extends BasePageComponent implements AfterViewI
   secondFormGroup: FormGroup;
   isEditable = false;
 
-  constructor(private _formBuilder: FormBuilder) {super() }
+  constructor(
+    private _formBuilder: FormBuilder,
+  )
+  {super() }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({

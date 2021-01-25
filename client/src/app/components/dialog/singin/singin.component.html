@@ -1,1 +1,15 @@
-<p>singin works!</p>
+<form [formGroup]="loginFormGroup">
+    <h2>Login</h2>
+    <span fxLayout="column" fxLayoutAlign="start center">
+        <mat-form-field>
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="loginCtrl" placeholder="Enter your Phone" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="loginCtrl" placeholder="min lenght 6" required>
+        </mat-form-field>
+    </span>
+</form>
+<button mat-button (click)="closeDialog()">Close</button>
+<button mat-button routerLink="/home">Sing In</button>
