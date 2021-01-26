@@ -17,8 +17,8 @@ async def create_msg(msg: msg_schemas.MessageIn):
 
 
 @msg_router.get('/messages/get_messages')
-async def get_all_msg(msg: msg_schemas.MessagesInOpt):
-    return await firebase_utils.get_msg(uid_from=msg.uid_from, uid_for=msg.uid_for)
+async def get_all_msg(uid_from: str, uid_for: Optional[str] = None):
+    return await firebase_utils.get_msg(uid_from=uid_from, uid_for=uid_for)
 
 
 @msg_router.delete('/messages/dell_messages') 
